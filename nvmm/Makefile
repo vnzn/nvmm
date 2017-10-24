@@ -80,7 +80,7 @@ PERIFLIB_SOURCES =
 #######################################
 # binaries
 #######################################
-BINPATH = 
+BINPATH = /usr/gcc-arm-none-eabi/bin
 PREFIX = arm-none-eabi-
 CC = $(BINPATH)/$(PREFIX)gcc
 AS = $(BINPATH)/$(PREFIX)gcc -x assembler-with-cpp
@@ -124,7 +124,8 @@ C_INCLUDES =  \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
 -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include\
+-I/usr/gcc-arm-none-eabi/arm-none-eabi/include
 
 
 # compile gcc flags
@@ -148,8 +149,8 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)"
 LDSCRIPT = STM32F103RCTx_FLASH.ld
 
 # libraries
-LIBS = -lc -lm -lnosys
-LIBDIR =
+LIBS = -lc -lm -lnosys 
+LIBDIR = #/usr/gcc-arm-none-eabi/arm-none-eabi/lib
 LDFLAGS = $(MCU) -specs=nano.specs -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 
 # default action: build all
