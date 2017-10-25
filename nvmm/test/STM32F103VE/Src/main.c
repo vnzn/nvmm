@@ -41,7 +41,7 @@
 
 /* USER CODE BEGIN Includes */
 #include <string.h>
-#include "nvmm/nvmm.h"
+#include "nvmm.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/

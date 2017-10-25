@@ -64,7 +64,8 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c \
 Src/system_stm32f1xx.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
-Src/main.c  
+Src/main.c \
+../../nvmm.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -125,6 +126,7 @@ C_INCLUDES =  \
 -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include\
+-I../../ \
 -I/usr/gcc-arm-none-eabi/arm-none-eabi/include
 
 
@@ -146,7 +148,7 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)"
 # LDFLAGS
 #######################################
 # link script
-LDSCRIPT = STM32F103RCTx_FLASH.ld
+LDSCRIPT = STM32F103VETx_FLASH.ld
 
 # libraries
 LIBS = -lc -lm -lnosys 

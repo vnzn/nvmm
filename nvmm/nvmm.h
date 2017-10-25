@@ -71,4 +71,4 @@ int g_write_nvmm(uint16_t id, size_t len, void* dat) ;
  */
 int g_read_nvmm(uint16_t id, size_t len, void *buf, size_t bufsize) ;
 
-#endif /* NVMM_SNV.H */
+#endif /* NVMM.H */
