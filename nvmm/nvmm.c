@@ -36,9 +36,9 @@
 #define NVMM_DUMMY_PAGE_STATE				0x00000000
 
 
-#define NVMM_PAGE_SIZE_DEFAULT			2048				//default set to 2K, should adjust based on the platform you are using.
+#define NVMM_PAGE_SIZE_DEFAULT			2048			//default set to 2K, should adjust based on the platform you are using.
 #define NVMM_PAGE_A_ID_DEFAULT			1				//use the 8th page as page A.
-#define NVMM_PAGE_B_ID_DEFAULT       		2				//use the 9th page as page B.
+#define NVMM_PAGE_B_ID_DEFAULT       	2				//use the 9th page as page B.
 
 
 #define NVMM_LINE_DELIMITER				0xAAAAAAAA
